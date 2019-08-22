@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Day / Night Mode Switch Toggle Using Html CSS and Javascript</title>
+    <meta charset='UTF-8'>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Raleway&display=swap");
+      body {
+        font-family: 'Raleway', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      section {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 100px;
+        transition: all 0.8s;
+      }
+
+      section.dark {
+        background-color: #444857;
+        color: #fff;
+        background: linear-gradient(to bottom, #434343, #444857);
+        transition: all 0.8s;
+      }
+
+      section p {
+        font-family: 'Open Sans Condensed', sans-serif;
+        line-height: 32px;
+        text-align: justify;
+      }
+
+      ul {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        margin: 0;
+        padding: 0;
+        width: 100px;
+        height: 30px;
+        z-index: 1;
+        border: 1px solid #000;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.8s;
+      }
+
+      ul.active {
+        border-color: #fff;
+        transition: all 0.8s;
+      }
+
+      ul li {
+        list-style: none;
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+      }
+
+      ul.active li {
+        -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+      }
+
+      ul li span {
+        color: #fff;
+        display: block;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+      }
+
+      ul li span:nth-child(1) {
+        background-color: #2d303a;
+        color: #fff;
+      }
+      </style>
+  </head>
+  <body>
+  
+    <section>
+      <h1>
+        Day / Night Mode Switch Toggle Using Html CSS and Javascript
+      </h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui accusamus quibusdam a, nesciunt inventore, suscipit praesentium rem ut, dolores impedit dolorum ipsum. Quo odio delectus, cumque pariatur aliquid quis aliquam officia, quos optio eaque amet tenetur possimus minima ratione vel!</p>
+      <p>Ullam obcaecati eius illum ducimus illo temporibus excepturi numquam, necessitatibus fuga quaerat doloribus consequuntur dolorem suscipit est aliquam! Deserunt amet cum non animi expedita iusto minus iste quaerat exercitationem dignissimos! Similique, blanditiis adipisci quisquam assumenda nam suscipit veniam debitis provident? Ullam obcaecati eius illum ducimus illo temporibus excepturi numquam, necessitatibus fuga quaerat doloribus consequuntur dolorem suscipit est aliquam! Deserunt amet cum non animi expedita iusto minus iste quaerat exercitationem dignissimos! Similique, blanditiis adipisci quisquam assumenda nam suscipit veniam debitis provident?</p>
+      <p>Porro ea voluptatibus commodi hic voluptas quae nesciunt ullam! Officia in, facilis tenetur incidunt omnis obcaecati. Sequi, fugiat? Est, architecto nesciunt obcaecati fugiat impedit odit non nobis. Perferendis sed, veritatis labore voluptatibus, possimus, assumenda obcaecati eaque distinctio a libero maxime.</p>
+      <p>Ipsum recusandae tempore adipisci cum, illum placeat eligendi eveniet accusamus in delectus nam, consequatur rem, sapiente dolor incidunt velit voluptas quibusdam laudantium nostrum nemo nobis libero deleniti. Quos ipsa tempore saepe. Praesentium aliquid perferendis maxime deserunt aspernatur fugiat nihil alias. Ullam obcaecati eius illum ducimus illo temporibus excepturi numquam, necessitatibus fuga quaerat doloribus consequuntur dolorem suscipit est aliquam! Deserunt amet cum non animi expedita iusto minus iste quaerat exercitationem dignissimos! Similique, blanditiis adipisci quisquam assumenda nam suscipit veniam debitis provident?</p>
+    </section>
+    <ul>
+      <li>
+        <span>Dark</span>
+        <span>Light</span>
+      </li>
+    </ul>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script>
+       $(document).ready(function () {
+        $('ul').click(function () {
+        $('ul').toggleClass('active');
+        $('section').toggleClass('dark');
+        });
+      });
+    </script>
+  </body>
+</html>  
